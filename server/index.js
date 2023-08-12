@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: ["https://tasks-app-client.vercel.app/"],
+    origin: ["https://tasks-app-client.vercel.app"],
     methods: ["POST", "GET", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
