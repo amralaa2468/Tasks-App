@@ -33,7 +33,7 @@ function UpdateTask() {
 
       try {
         const response = await axios.get(
-          `tasks-app-server-pearl.vercel.app/api/tasks/get-task/${taskId}`,
+          `https://tasks-app-server-pearl.vercel.app/api/tasks/get-task/${taskId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -65,7 +65,7 @@ function UpdateTask() {
 
     try {
       const response = await axios.patch(
-        `tasks-app-server-pearl.vercel.app/api/tasks/${taskId}`,
+        `https://tasks-app-server-pearl.vercel.app/api/tasks/${taskId}`,
         taskData,
         {
           headers: {
