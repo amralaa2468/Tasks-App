@@ -34,7 +34,7 @@ function Tasks() {
   const fetchTasks = async (userId, token) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/tasks/${userId}`,
+        `tasks-app-server-pearl.vercel.app/api/tasks/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -55,7 +55,7 @@ function Tasks() {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/tasks/${taskId}`,
+        `tasks-app-server-pearl.vercel.app/api/tasks/${taskId}`,
         {
           isCompleted: !isCompleted,
         },
@@ -77,7 +77,7 @@ function Tasks() {
   const deleteTask = async (taskId) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${taskId}`, {
+      await axios.delete(`tasks-app-server-pearl.vercel.app/api/tasks/${taskId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -92,7 +92,7 @@ function Tasks() {
     const token = localStorage.getItem("token");
     try {
       await axios.patch(
-        `http://localhost:5000/api/tasks/add-comment/${taskId}`,
+        `tasks-app-server-pearl.vercel.app/api/tasks/add-comment/${taskId}`,
         {
           comment: newComment,
         },
