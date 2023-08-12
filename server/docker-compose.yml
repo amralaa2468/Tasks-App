@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  # MongoDB services
+  mongo_db:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+  # NODE API service
+  api:
+    build: .
+    ports:
+      - 5000:4000
+    environment:
+      PORT: 4000
+      MONGO_URL: mongodb+srv://amralaa:ftUeusd5sBRPfpkC@cluster0.39jnzkv.mongodb.net/?retryWrites=true&w=majority
+      JWT_SECRET: supersecretkeydontshare
+    depends_on:
+      - mongo_db
+
+volumes:
+  mongo_db: {}
