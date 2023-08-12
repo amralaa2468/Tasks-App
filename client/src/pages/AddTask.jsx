@@ -36,7 +36,8 @@ function AddTask() {
         userId,
       };
 
-      await axios.post("http://localhost:5000/api/tasks", newTask, {
+      await axios.post("tasks-app-server-pearl.vercel.app
+/api/tasks", newTask, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
