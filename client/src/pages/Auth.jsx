@@ -54,7 +54,7 @@ function Auth() {
   const register = async (values, onSubmitProps) => {
     try {
       const savedUserResponse = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "tasks-app-server-pearl.vercel.app/api/auth/register",
         values
       );
 
@@ -72,7 +72,7 @@ function Auth() {
   const login = async (values, onSubmitProps) => {
     try {
       const loggedInResponse = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "tasks-app-server-pearl.vercel.app/api/auth/login",
         values,
         {
           headers: { "Content-Type": "application/json" },
