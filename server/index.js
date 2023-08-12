@@ -32,6 +32,7 @@ app.use("/api/tasks", verifyToken, tasksRoutes);
 
 // Mongoose setup
 const PORT = process.env.PORT || 5000;
+console.log("mongo url: " + process.env.MONGO_URL);
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
