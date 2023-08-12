@@ -1,0 +1,14 @@
+The features that I am going to implement: 
+1) Update task: Allow users to edit and update existing tasks. (done backend, done front)
+
+2)Filter and Sorting:  Implement the ability to filter tasks based on completion status or due date. 
+	Allow users to sort tasks by due date or completion status. ( done in frontend)
+
+3)User Authentication: Add user authentication and allow users to have their task lists. 
+	Each user should only see and manage their tasks. (done backend, donefront)
+
+4)Task Comments: Allow users to add comments to tasks and view a list of comments on each task.
+	(done backend, done front)
+
+5)Data Validation: Ensure that all input data is properly validated on both the frontend
+	 and backend to prevent any potential security vulnerabilities. (done backend, done front)
